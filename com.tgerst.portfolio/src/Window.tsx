@@ -24,11 +24,11 @@ export const Window: React.FC<Props> = (props) => {
     if (!windowState.dragging) return;
     const topDiff = e.pageY - windowState.rel.top;
     const leftDiff = e.pageX - windowState.rel.left;
-    console.log('e.pageY: ', e.pageY);
-    console.log('windowState.rel.top: ', topDiff);
-    console.log('top: topDiff >= 0 ? topDiff : 0', topDiff >= 0 ? topDiff : 0);
+    // console.log('e.pageY: ', e.pageY);
+    // console.log('windowState.rel.top: ', topDiff);
+    // console.log('top: topDiff >= 0 ? topDiff : 0', topDiff >= 0 ? topDiff : 0);
     setWindowState({top: topDiff >= 0 ? topDiff : 0, left: leftDiff, dragging: windowState.dragging, rel: { top: windowState.rel.top, left: windowState.rel.left }});
-    console.debug('onMouseMove windowState:', windowState);
+    // console.log('onMouseMove windowState:', windowState);
     e.stopPropagation();
     e.preventDefault();
   }
@@ -40,7 +40,7 @@ export const Window: React.FC<Props> = (props) => {
       const leftDiff = e.pageX - windowState.rel.left;
       var computedStyle = window.getComputedStyle(TitleBarRef.current);
       var pos = { top: parseInt(computedStyle.top), left: parseInt(computedStyle.left) };
-      console.log('computed style: ', pos);
+      // console.log('computed style: ', pos);
       setWindowState({ top: windowState.top, left: windowState.left, dragging: true, rel: { top: e.pageY - pos.top, left: e.pageX - pos.left } });
     } else {
       //title bar didnt render for some reason, maybe your toaster of a workstation ran out of resources
@@ -55,9 +55,9 @@ export const Window: React.FC<Props> = (props) => {
     e.preventDefault();
   }
 
-  useEffect(() => {
-    console.log('draggign? :', windowState.dragging);
-  }, [windowState.dragging])
+  // useEffect(() => {
+  //   console.log('draggign? :', windowState.dragging);
+  // }, [windowState.dragging])
   
   return showing && <div className="DesktopWindow" style={{
       width: props.width,
