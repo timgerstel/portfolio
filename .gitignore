@@ -1,3 +1,8 @@
+.DS_store
+
+# Old files
+waves_old/
+
 # Logs
 logs
 *.log
