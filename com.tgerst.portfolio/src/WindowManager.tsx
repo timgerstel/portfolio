@@ -17,9 +17,9 @@ export default class WinMan {
     return WinMan.sharedInstance;
   }
 
-  addWindow(uniqueId: string, title: string, content: any, width?: any, height?: any) {
+  addWindow(uniqueId: string, title: string, content: any, width?: any, height?: any, style?: any) {
     console.log('adding window');
-    this.windows[uniqueId] = <Window windowId={uniqueId} title={title} key={uniqueId} width={width || "50%"} height={height || "70%"} content={content}></Window>
+    this.windows[uniqueId] = <Window windowId={uniqueId} title={title} key={uniqueId} styleObj={style} width={width || "50%"} height={height || "70%"} content={content}></Window>
     if(this.forceRenderFunc != null) this.forceRenderFunc();
   }
 

@@ -13,6 +13,7 @@ interface Props {
   startingY?: string;
   startInBackground?: boolean;
   showing?: boolean;
+  styleObj?: any;
   windowId: any;
 }
 
@@ -73,7 +74,7 @@ export const Window: React.FC<Props> = (props) => {
       </div>
       <div className="WindowTitle">{ props.title }</div>
     </div>
-    <div className="WindowContent">
+    <div className="WindowContent" style={props.styleObj}>
         { props.content !=null && props.content }
       </div>
   </div></div>;

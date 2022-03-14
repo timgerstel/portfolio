@@ -33,16 +33,22 @@ let MenuItems = [
   {
     title: 'thanks for visiting boo',
     children: [
-      { title: 'i had someone tell me i fell off', action: (e: React.MouseEvent, callback: any) => {
+      { title: 'click me first', action: (e: React.MouseEvent, callback: any) => {
         WinMan.getInstance().addWindow('AppMain.ButWhy', 'under construction', <div><h2>hey</h2>
-          <p>this portfolio and its content is incomplete as you can tell by the complete lack of professionalism</p>
-          <p>please hire me anyway</p>
-          <p>thank u</p></div>
+          <p>this portfolio and its content is incomplete as you can tell by the lack of professionalism</p>
+          <p>thank u for your understanding</p></div>
         , '50%', 'max-content');
         callback() }},
+        { title: 'i had someone tell me i fell off', action: (e: React.MouseEvent, callback: any) => {
+          WinMan.getInstance().addWindow('AppMain.yur', 'sure just click everything', <div><p>no really break it, it's fine </p></div>
+          , '50%', 'max-content');
+          callback() }},
       { title: 'oo i needed that >',
         children: [
-          { title: 'and they wanna see me pick it back up...', action: (e: React.MouseEvent, callback: any) => { callback() }},
+          { title: 'and they wanna see me pick it back up...', action: (e: React.MouseEvent, callback: any) => { 
+            WinMan.getInstance().addWindow('AppMain.yuur', 'im so sorry', <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0&autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          , '50%', '50%', {backgroundColor: "rgba(0,0,0,0)", border: "0"});
+            callback() }},
           { title: 'well whered i leave it at? >', children: [
             { title: 'ayy yo', action: (e: React.MouseEvent, callback: any) => {
               WinMan.getInstance().addWindow('AppMain.WheelchairJimmy', 'this is drake from degrassi please dont cancel me', <img src="https://i.kym-cdn.com/entries/icons/mobile/000/009/605/21953.jpg" width="100%" height="100%"></img>, '33%', '33%')
