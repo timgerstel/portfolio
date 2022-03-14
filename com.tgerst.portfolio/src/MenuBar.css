@@ -29,6 +29,7 @@
 
 .MenuBarItemBody {
   padding: 0 3px 3px 0;
+  width: max-content;
 }
 
 .MenuBarItemTitle {
@@ -40,6 +41,7 @@
   border: none;
   cursor: pointer;
   width: 100%;
+  text-align: left;
 }
 
 .MenuBarItem-Dropdown {
@@ -51,15 +53,6 @@
   z-index: 1;
   text-align: left;
   padding: 0 5px 0 5px;
-}
-
-.MenuBarItem-Dropdown span {
-  text-align: left;
-  background-color: rgba(75, 75, 75, 0);
-  color: white;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
 }
 
 .MenuBarItem-Dropdown .MenuBarItem:hover {
