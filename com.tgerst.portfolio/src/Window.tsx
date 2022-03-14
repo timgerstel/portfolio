@@ -58,11 +58,12 @@ export const Window: React.FC<Props> = (props) => {
     e.preventDefault();
   }
   
-  return <div className="DesktopWindow" style={{
+  return <div style={{}}><div className="DesktopWindow" style={{
       width: props.width,
+      transform: "translate(50%, 0)",
       height: props.height,
       left: windowState.left,
-      top: windowState.top
+      top: windowState.top,
     }}>
     <div className="WindowTitleBar" ref={ TitleBarRef } onMouseMove={ onMouseMove} onMouseDown={ onMouseDown } onMouseUp={ onMouseUp } style={{ left: windowState.left, top: windowState.top}}>
       <div className="WindowControls">
@@ -75,5 +76,5 @@ export const Window: React.FC<Props> = (props) => {
     <div className="WindowContent">
         { props.content !=null && props.content }
       </div>
-  </div> || null;
+  </div></div> || null;
 }
