@@ -40,8 +40,8 @@ let MenuItems = [
         , '50%', 'max-content');
         callback() }},
         { title: 'i had someone tell me i fell off', action: (e: React.MouseEvent, callback: any) => {
-          WinMan.getInstance().addWindow('AppMain.yur', 'sure just click everything', <div><p>no really break it, it's fine </p></div>
-          , '50%', 'max-content');
+          WinMan.getInstance().addWindow('AppMain.yur', 'portfolioception', <iframe width="100%" height="100%" src="https://timgerstel.github.io"></iframe>
+          , '70%', '50%');
           callback() }},
       { title: 'oo i needed that >',
         children: [
