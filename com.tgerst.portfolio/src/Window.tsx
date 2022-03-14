@@ -76,5 +76,5 @@ export const Window: React.FC<Props> = (props) => {
     <div className="WindowContent">
         { props.content !=null && props.content }
       </div>
-  </div></div> || null;
+  </div></div>;
 }
