@@ -34,12 +34,11 @@ let MenuItems = [
     title: 'thanks for visiting boo',
     children: [
       { title: 'i had someone tell me i fell off', action: (e: React.MouseEvent, callback: any) => {
-        WinMan.getInstance().addWindow('AppMain.ButWhy', 'under construction', <div style={{width: "100%", height: "100%"}}>
-          <h2>hey</h2>
+        WinMan.getInstance().addWindow('AppMain.ButWhy', 'under construction', <div><h2>hey</h2>
           <p>this portfolio and its content is incomplete as you can tell by the complete lack of professionalism</p>
           <p>please hire me anyway</p>
-          <p>thank u</p>
-        </div>);
+          <p>thank u</p></div>
+        , '50%', 'max-content');
         callback() }},
       { title: 'oo i needed that >',
         children: [
