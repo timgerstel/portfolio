@@ -31,9 +31,9 @@ export const MenuBarItem: React.FC<Props> = (props) => {
   // }, [activeItem])
 
   return (
-    <div className="MenuBarItem" onMouseEnter={mouseEnterHandler} onBlur={() => setActiveItem('-1')}>
-      <div className="MenuBarItemBody" >
-        <span className="MenuBarItemTitle" onClick={clickHandler}>{props.itemObj.title}</span>
+    <div className="MenuBarItem" onClick={clickHandler} onMouseEnter={mouseEnterHandler} onBlur={() => setActiveItem('-1')}>
+      <div className="MenuBarItemBody">
+        <span className="MenuBarItemTitle" >{props.itemObj.title}</span>
         <div className={isActive ? "MenuBarItem-Dropdown Show-Dropdown" : "MenuBarItem-Dropdown"} onMouseEnter={mouseEnterHandler}>
           {props.itemObj.children?.map((val: any, ind: number) => {
             return <MenuBarItem itemObj={val} key={ind} id={`${props.id}.${ind}`} activeItem={activeItem} setActive={setActiveItem}></MenuBarItem>

@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import './MenuBar.css'
 import { MenuBarItem } from './MenuBarItem'
 import { useClickOutEvent } from './Utils'
+import WinMan from './WindowManager';
+import { RESUME_JSX } from './default_windows/Resume'
 
 interface Props {
   ActionList?: string[]
@@ -18,6 +20,7 @@ let MenuItems = [
     title: <b>TG</b>,
     children: [
       { title: 'About Tim Gerstel', action: (e: React.MouseEvent, callback: any) => {
+        WinMan.getInstance().addWindow('AppMain.ResumeWindow','resume.pdf', RESUME_JSX)
         callback()
       }},
       { title: 'Email Tim Gerstel', action: (e: React.MouseEvent, callback: any) => {
@@ -28,14 +31,17 @@ let MenuItems = [
     action: (e: React.MouseEvent, callback: any) => { callback() }
   },
   {
-    title: 'Yeeeeeer',
+    title: 'thanks for visiting boo',
     children: [
-      { title: 'you already kno what it is', action: (e: React.MouseEvent, callback: any) => { callback() }},
-      { title: 'this gon be something eventually >',
+      { title: 'i had someone tell me i fell off', action: (e: React.MouseEvent, callback: any) => { callback() }},
+      { title: 'oo i needed that >',
         children: [
-          { title: 'what im sayin is...', action: (e: React.MouseEvent, callback: any) => { callback() }},
-          { title: 'but for right now its kinda janky i know iknow >', children: [
-            { title: 'ayy yo', action: (e: React.MouseEvent, callback: any) => { callback() }},
+          { title: 'and they wanna see me pick it back up...', action: (e: React.MouseEvent, callback: any) => { callback() }},
+          { title: 'well whered i leave it at? >', children: [
+            { title: 'ayy yo', action: (e: React.MouseEvent, callback: any) => {
+              console.log('ayy yo clicked')
+              WinMan.getInstance().addWindow('AppMain.WheelchairJimmy', 'champagne papi', <img src="https://i.kym-cdn.com/entries/icons/mobile/000/009/605/21953.jpg" width="100%" height="100%"></img>)
+              callback() }},
           ],
           action: (e: React.MouseEvent, callback: any) => {callback()} }
         ],

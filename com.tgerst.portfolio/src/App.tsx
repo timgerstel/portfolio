@@ -1,30 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
-import { RouterProvider } from './router/RouterContext';
-import { Link } from './router/Link';
-import { Route } from './router/Route';
-import { Routes } from './Routes';
+// import { RouterProvider } from './router/RouterContext';
+// import { Link } from './router/Link';
+// import { Route } from './router/Route';
+// import { Routes } from './Routes';
 import { MenuBar } from './MenuBar';
-import { Window } from './Window';
+import WinMan, {WindowManager} from './WindowManager'
+import { RESUME_JSX } from './default_windows/Resume'
 
 function App() {
-  const RESUME_JSX =  <object data="/desktop_files/resume.pdf" type="application/pdf" width="100%" height="100%">
-    <p>Alternative text - include a link <a href="http://africau.edu/images/default/sample.pdf">to the PDF!</a></p>
-  </object>
+  WinMan.getInstance().addWindow('AppMain.ResumeWindow','resume.pdf', RESUME_JSX)
+
   return (
     <div className="App">
       <MenuBar></MenuBar>
-      <div className="DesktopContainer" onMouseDown={(e) => {
-          console.log('desktop mouse down x: ' + e.clientX + ' y:' + e.clientY)
-        }} onMouseUp={(e) => {
-          console.log('desktop mouse up x: ' + e.clientX + ' y:' + e.clientY)
-      }}>
+      <div className="DesktopContainer">
         <div className="Desktop">
-          <div className="WindowManager">
-            <Window title="Bienvenidos" width="50%" height="75%" content={RESUME_JSX}></Window>
-          </div>
+          <WindowManager></WindowManager>
           <div className="IconGrid">
-            
           </div>
           <div className="Wallpaper">
             <div className="wave"></div>

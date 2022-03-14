@@ -1,6 +1,5 @@
 .DesktopWindow {
-  margin: 0 auto;
-  position: relative;
+  position: absolute;
 }
 
 .WindowTitleBar {
@@ -11,7 +10,7 @@
   border: 0.5px solid rgba(177, 177, 177, 0.274);
   width: 100%;
   padding-bottom: 0;
-  line-height: 22px;
+  line-height: 25px;
 }
 
 .WindowControls {
