@@ -41,8 +41,8 @@ export const Window: React.FC<Props> = (props) => {
       const { clientWidth } = TitleBarRef.current;
       var computedStyle = window.getComputedStyle(TitleBarRef.current);
       var pos = { top: parseInt(computedStyle.top), left: parseInt(computedStyle.left) };
-      console.log('clientWidth: ', clientWidth);
-      console.log('mouseDown pos:', pos);
+      // console.log('clientWidth: ', clientWidth);
+      // console.log('mouseDown pos:', pos);
       // console.log('computed style: ', pos);
       setWindowState({ top: windowState.top, left: windowState.left, dragging: true, rel: { top: e.pageY - pos.top, left: e.pageX - pos.left } });
     } else {
