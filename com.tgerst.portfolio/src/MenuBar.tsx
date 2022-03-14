@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import './MenuBar.css'
 import { MenuBarItem } from './MenuBarItem'
 import { useClickOutEvent } from './Utils'
-import { ResWind, ResWindShowing, setResWindShowing } from './default_windows/Resume'
 
 interface Props {
   ActionList?: string[]
@@ -19,7 +18,6 @@ let MenuItems = [
     title: <b>TG</b>,
     children: [
       { title: 'About Tim Gerstel', action: (e: React.MouseEvent, callback: any) => {
-        if(!ResWindShowing) setResWindShowing(true);
         callback()
       }},
       { title: 'Email Tim Gerstel', action: (e: React.MouseEvent, callback: any) => {
