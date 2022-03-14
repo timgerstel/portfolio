@@ -39,7 +39,7 @@ let MenuItems = [
           { title: 'and they wanna see me pick it back up...', action: (e: React.MouseEvent, callback: any) => { callback() }},
           { title: 'well whered i leave it at? >', children: [
             { title: 'ayy yo', action: (e: React.MouseEvent, callback: any) => {
-              WinMan.getInstance().addWindow('AppMain.WheelchairJimmy', 'champagne papi', <img src="https://i.kym-cdn.com/entries/icons/mobile/000/009/605/21953.jpg" width="100%" height="100%"></img>, '33%', '33%')
+              WinMan.getInstance().addWindow('AppMain.WheelchairJimmy', 'this is drake from degrassi please dont cancel me', <img src="https://i.kym-cdn.com/entries/icons/mobile/000/009/605/21953.jpg" width="100%" height="100%"></img>, '33%', '33%')
               callback() }},
           ],
           action: (e: React.MouseEvent, callback: any) => {callback()} }
