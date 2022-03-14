@@ -79,6 +79,6 @@ html, body {
 
 body {
   /* background:radial-gradient(ellipse at center, #bea1fc81 0%, rgb(233, 187, 252) 15%, #5019e9 100%); */
-  background:radial-gradient(rgb(225, 164, 252) 3%, #5019e9 100%);
+  background:radial-gradient(#9d9d9d 3%, #000000 100%);
   overflow: hidden;
 }
